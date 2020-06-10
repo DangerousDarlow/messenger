@@ -1,6 +1,5 @@
 package com.noicesoftware.messenger.controllers
 
-import com.noicesoftware.messenger.model.Message
 import org.slf4j.Logger
 import org.springframework.messaging.handler.annotation.MessageMapping
 import org.springframework.stereotype.Controller
@@ -9,7 +8,7 @@ import org.springframework.stereotype.Controller
 class MessageController(val logger: Logger) {
 
     @MessageMapping("/text")
-    fun receiveMessage(message: Message) {
+    fun receiveMessage(message: String) {
         logger.info("received: $message")
     }
 }
