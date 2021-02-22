@@ -19,6 +19,7 @@ class WebSocketConfig : WebSocketMessageBrokerConfigurer {
         registry
                 .addEndpoint("/websocket")
                 .setAllowedOrigins("http://localhost:3000")
+                .setAllowedOrigins("https://heuristic-ardinghelli-186726.netlify.app")
                 .withSockJS()
     }
 }
