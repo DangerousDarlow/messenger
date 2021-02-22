@@ -18,8 +18,7 @@ class WebSocketConfig : WebSocketMessageBrokerConfigurer {
     override fun registerStompEndpoints(registry: StompEndpointRegistry) {
         registry
                 .addEndpoint("/websocket")
-                .setAllowedOrigins("http://localhost:3000")
-                .setAllowedOrigins("https://heuristic-ardinghelli-186726.netlify.app")
+                .setAllowedOrigins("http://localhost:3000", "https://heuristic-ardinghelli-186726.netlify.app")
                 .withSockJS()
     }
 }
